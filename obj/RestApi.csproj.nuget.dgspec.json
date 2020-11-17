@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Rest_API\\Rocket_Elevator_Rest_API\\RestApi.csproj": {}
+    "C:\\week9\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj": {}
   },
   "projects": {
-    "C:\\Rest_API\\Rocket_Elevator_Rest_API\\RestApi.csproj": {
+    "C:\\week9\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Rest_API\\Rocket_Elevator_Rest_API\\RestApi.csproj",
+        "projectUniqueName": "C:\\week9\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
         "projectName": "RestApi",
-        "projectPath": "C:\\Rest_API\\Rocket_Elevator_Rest_API\\RestApi.csproj",
+        "projectPath": "C:\\week9\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Rest_API\\Rocket_Elevator_Rest_API\\obj\\",
+        "outputPath": "C:\\week9\\Rocket_Elevator_Foundation_Rest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
