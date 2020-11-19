@@ -1,3 +1,45 @@
+# Rocket Elevator Foundation Week 9
+
+## How to know and to mapiuplate the status of all the relevant entities of the operational database
+### Here's a link to the collection of the requests in **[Postman]()**. If you prefer, you can do it manually with the walkthrough below.
+
+1- Returns all fields of all Service Request records that do not have a start date and are in "Pending" status:
+
+    GET 
+    https://rest-api-foundation.azurewebsites.net/api/Pending
+    SEND
+    
+2- Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp)
+
+    PUT 
+    https://rest-api-foundation.azurewebsites.net/api/InProgress/1	[1 = intervention ID]
+    Select:	 Body
+                Raw
+                JSON
+    In the text field, enter: { "status": "InProgress" } 
+    SEND
+    You can verify if it worked by retrieving infos of the specific intervention (STEP 4)
+
+3- Change the status of the request for action to "Completed" and add an end date and time (Timestamp)
+
+    PUT 
+    https://rest-api-foundation.azurewebsites.net/api/Completed/1	[1 = intervention ID]
+    Select:	 Body
+                Raw
+                JSON
+    In the text field, enter: { "status": "Completed" } 
+    SEND
+    You can verify if it worked by retrieving infos of the specific intervention (STEP 4).
+    
+ 4- Retrieving the current status of a specific Column:
+
+    GET 
+    https://rest-api-foundation.azurewebsites.net/api/Intervention/1 [1 = intervention ID]
+    SEND
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # Rocket_Elevator_Rest_API
 ## Members of the team
 - **[Loïc Rico](https://github.com/ricoloic)**
