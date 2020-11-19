@@ -31,7 +31,7 @@
     SEND
     You can verify if it worked by retrieving infos of the specific intervention (STEP 4).
     
- 4- Retrieving the current status of a specific Column:
+ 4- Retrieving the current status of a specific Intervention:
 
     GET 
     https://rest-api-foundation.azurewebsites.net/api/Intervention/1 [1 = intervention ID]
