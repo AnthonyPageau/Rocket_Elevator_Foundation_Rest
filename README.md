@@ -6,13 +6,13 @@
 1- Returns all fields of all Service Request records that do not have a start date and are in "Pending" status:
 
     GET 
-    https://rest-api-foundation.azurewebsites.net/api/Pending
+    https://rest-api-foundation.azurewebsites.net/api/Intervention/Pending
     SEND
     
 2- Change the status of the intervention request to "InProgress" and add a start date and time (Timestamp)
 
     PUT 
-    https://rest-api-foundation.azurewebsites.net/api/InProgress/1	[1 = intervention ID]
+    https://rest-api-foundation.azurewebsites.net/api/Intervention/InProgress/1	[1 = intervention ID]
     Select:	 Body
                 Raw
                 JSON
@@ -23,7 +23,7 @@
 3- Change the status of the request for action to "Completed" and add an end date and time (Timestamp)
 
     PUT 
-    https://rest-api-foundation.azurewebsites.net/api/Completed/1	[1 = intervention ID]
+    https://rest-api-foundation.azurewebsites.net/api/Intervention/Completed/1	[1 = intervention ID]
     Select:	 Body
                 Raw
                 JSON
