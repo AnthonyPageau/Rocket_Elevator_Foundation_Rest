@@ -21,8 +21,8 @@ namespace RestApi.Controllers
             _context = context;
         }
 
-        // GET: api/Intervention
-        [HttpGet]
+        // GET: api/Intervention/Pending
+        [HttpGet("Pending")]
         public ActionResult<List<Intervention>> GetAll ()
         {
             var list = _context.interventions.ToList();
