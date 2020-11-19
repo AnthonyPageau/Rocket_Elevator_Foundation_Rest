@@ -1,7 +1,7 @@
 # Rocket Elevator Foundation Week 9
 
 ## How to know and to mapiuplate the status of all the relevant entities of the operational database
-### Here's a link to the collection of the requests in **[Postman](https://www.getpostman.com/collections/66accb0d5744e80f1086)**. If you prefer, you can do it manually with the walkthrough below.
+### Here's a link to the collection of the requests in **[Postman](https://www.getpostman.com/collections/66accb0d5744e80f1086)**. If you prefer, you can do it manually with the walkthrough below. (If for some reason the post link doesn't work, we had some problem last week with it I added a json file with the necessary informations)
 
 1- Returns all fields of all Service Request records that do not have a start date and are in "Pending" status:
 
