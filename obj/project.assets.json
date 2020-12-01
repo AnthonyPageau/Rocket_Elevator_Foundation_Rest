@@ -9790,11 +9790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\week9\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Week11Rest\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
       "projectName": "RestApi",
-      "projectPath": "C:\\week9\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
+      "projectPath": "C:\\Users\\User\\Week11Rest\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\week9\\Rocket_Elevator_Foundation_Rest\\obj\\",
+      "outputPath": "C:\\Users\\User\\Week11Rest\\Rocket_Elevator_Foundation_Rest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9884,12 +9884,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.9, 3.1.9]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

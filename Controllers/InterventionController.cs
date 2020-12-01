@@ -40,11 +40,10 @@ namespace RestApi.Controllers
             return pending_intervention_list;
         }
 
-        // GET: api/Intervention/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Intervention>> GetIntervention(long id)
+        [HttpGet("Customer/{customer_id}")]
+        public async Task<ActionResult<Intervention>> GetCustomer(long customer_id)
         {
-            var intervention = await _context.interventions.FindAsync(id);
+            var intervention = await _context.interventions.FindAsync(customer_id);
 
             if (intervention == null)
             {
