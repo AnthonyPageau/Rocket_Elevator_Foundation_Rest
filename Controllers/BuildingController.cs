@@ -78,6 +78,24 @@ namespace RestApi.Controllers
             // Remove any duplicate buildings in the list
             List<Building> all_building = intervention_building.Distinct().ToList();
             return all_building;
+        }
+        [HttpGet("forBuilding/{id}")]
+        public ActionResult<List<Building>> GetCustomerBuilding(long id)
+        {
+            // get a complete list of columns
+            List<Building> buildingsAll = _context.buildings.ToList();
+            List<Building> customerBuildings = new List<Building>();
+            // select relevant columns
+            foreach(Building building in buildingsAll)
+            {
+                if ((building.customer_id) == id)
+                {
+                    // only add  that belong to desired building
+                    customerBuildings.Add(building);
+                }
+            }
+            return customerBuildings;
+
         }     
     }
 }

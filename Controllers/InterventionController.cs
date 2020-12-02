@@ -101,5 +101,13 @@ namespace RestApi.Controllers
             status["message"] = "The status of the Intervention with the id number #" + i.Id + " have been changed to " + i.status;
             return Content (status.ToString (), "application/json");
         }
+        [HttpPost]
+        public async Task<ActionResult<Intervention>> PostIntervention(Intervention intervention)
+        {
+            _context.interventions.Add(intervention);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetIntervention", new { id = intervention.Id }, intervention);
+        }
     }
 }

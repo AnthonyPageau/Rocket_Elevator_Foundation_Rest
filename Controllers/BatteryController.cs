@@ -44,6 +44,25 @@ namespace RestApi.Controllers
             return Content (status.ToString (), "application/json");
         }
 
+        [HttpGet("forBattery/{id}")]
+        public ActionResult<List<Battery>> GetCustomerBuilding(long id)
+        {
+            // get a complete list of columns
+            List<Battery> buildingsAll = _context.batteries.ToList();
+            List<Battery> customerBuildings = new List<Battery>();
+            // select relevant columns
+            foreach(Battery battery in buildingsAll)
+            {
+                if ((battery.building_id) == id)
+                {
+                    // only add  that belong to desired battery
+                    customerBuildings.Add(battery);
+                }
+            }
+            return customerBuildings;
+
+        }     
+
         // PUT: api/Battery/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

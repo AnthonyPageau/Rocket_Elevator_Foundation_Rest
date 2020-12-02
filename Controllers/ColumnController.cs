@@ -45,6 +45,26 @@ namespace RestApi.Controllers
             return Content (status.ToString (), "application/json");
         }
 
+        
+        [HttpGet("forColumn/{id}")]
+        public ActionResult<List<Column>> GetBatteryColumn(long id)
+        {
+            // get a complete list of columns
+            List<Column> columnsAll = _context.columns.ToList();
+            List<Column> batteryColumns = new List<Column>();
+            // select relevant columns
+            foreach(Column column in columnsAll)
+            {
+                if ((column.battery_id) == id)
+                {
+                    // only add  that belong to desired column
+                    batteryColumns.Add(column);
+                }
+            }
+            return batteryColumns;
+
+        }     
+
         // PUT: api/Column/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
