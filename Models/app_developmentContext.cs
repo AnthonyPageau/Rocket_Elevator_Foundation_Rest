@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RestApi.Models;
+using Rocket_Elevator_Foundation_Rest.Models;
 
 namespace RestApi.Models
 {
@@ -21,5 +22,6 @@ namespace RestApi.Models
         public virtual DbSet<Customer> customers { get; set; }
         public virtual DbSet<Employe> employees { get; set; }
         public virtual DbSet<Intervention> interventions { get; set; }
+        public DbSet<Quote> quotes { get; set; }
     }
 }

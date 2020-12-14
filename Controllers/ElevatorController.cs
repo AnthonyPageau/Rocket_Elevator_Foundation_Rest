@@ -21,8 +21,14 @@ namespace RestApi.Controllers
             _context = context;
         }
 
-        // GET: api/Elevator
+
         [HttpGet]
+        public async Task<ActionResult<IEnumerable<Elevator>>> Getelevators()
+        {
+            return await _context.elevators.ToListAsync();
+        }
+        // GET: api/Elevator
+        [HttpGet("Active")]
         public ActionResult<List<Elevator>> GetAll ()
             {
             var list = _context.elevators.ToList(); // List of all the elevators in the database
@@ -40,6 +46,41 @@ namespace RestApi.Controllers
                 }
             }
             return inactive_elevator_list;
+        }
+
+
+        [HttpGet("Amount")]
+        public async Task<IActionResult> getAmount()
+        {
+            var list = _context.elevators.ToList();
+            var listCount = list.Count;
+            var amount = new JObject ();
+            amount["amount"] = listCount;
+            return Content (amount.ToString (), "application/json");
+        }
+
+        [HttpGet("Inactive/Amount")]
+        public async Task<IActionResult> getInactiveAmount()
+        {
+            var list = _context.elevators.ToList(); // List of all the elevators in the database
+
+            if (list == null)
+            {
+                return NotFound();
+            }
+            List<Elevator> inactive_elevator_list = new List<Elevator>(); // Elevators will be added in this list if they respect the requirements (If they don't have an ACTIVE status)
+            // Add elevators in the list if they don't have an ACTIVE status
+            foreach (var elevator in list)
+            {
+                if (elevator.elevator_status != "ACTIVE") {
+                    inactive_elevator_list.Add (elevator);
+                }
+            }
+
+            var listCount = inactive_elevator_list.Count;
+            var amount = new JObject ();
+            amount["amount"] = listCount;
+            return Content (amount.ToString (), "application/json");
         }
 
         // GET: api/Elevator/5

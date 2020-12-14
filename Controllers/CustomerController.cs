@@ -21,6 +21,7 @@ namespace RestApi.Controllers
             _context = context;
         }
 
+        
         // GET: api/Customer
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Customer>>> Getcustomers()
@@ -28,11 +29,33 @@ namespace RestApi.Controllers
             return await _context.customers.ToListAsync();
         }
 
+        [HttpGet("Amount")]
+        public async Task<IActionResult> getAmount()
+        {
+            var list = _context.customers.ToList();
+            var listCount = list.Count;
+            var amount = new JObject ();
+            amount["amount"] = listCount;
+            return Content (amount.ToString (), "application/json");
+        }
         // GET: api/Customer/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Customer>> GetCustomer(long id)
         {
             var customer = await _context.customers.FindAsync(id);
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+            var email = new JObject ();
+            email["company_contact_email"] = customer.company_contact_email;
+            return Content (email.ToString (), "application/json");
+        }
+        [HttpGet("Email/{company_contact_email}")]                           
+        public async Task<ActionResult<Customer>> GetCustomerByEmail(string company_contact_email)
+        {
+            var customer = await _context.customers.FindAsync(company_contact_email);
 
             if (customer == null)
             {

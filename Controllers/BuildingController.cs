@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestApi.Models;
+using Newtonsoft.Json.Linq;
 
 namespace RestApi.Controllers
 {
@@ -20,6 +21,16 @@ namespace RestApi.Controllers
             _context = context;
         }
 
+        [HttpGet("Amount")]
+        public async Task<IActionResult> getAmount()
+        {
+            var list = _context.buildings.ToList();
+            var listCount = list.Count;
+            var amount = new JObject ();
+            amount["amount"] = listCount;
+            return Content (amount.ToString (), "application/json");
+        }
+        
         // GET: api/Building
         [HttpGet]
         public ActionResult<List<Building>> GetAll ()

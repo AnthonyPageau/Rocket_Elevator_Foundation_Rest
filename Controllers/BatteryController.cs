@@ -28,6 +28,16 @@ namespace RestApi.Controllers
             return await _context.batteries.ToListAsync();
         }
 
+        [HttpGet("Amount")]
+        public async Task<IActionResult> getAmount()
+        {
+            var list = _context.batteries.ToList();
+            var listCount = list.Count;
+            var amount = new JObject ();
+            amount["amount"] = listCount;
+            return Content (amount.ToString (), "application/json");
+        }
+
         // GET: api/Battery/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Battery>> GetBattery(long id)

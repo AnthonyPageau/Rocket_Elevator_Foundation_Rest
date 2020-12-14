@@ -9790,11 +9790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\rest\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
+      "projectUniqueName": "C:\\Users\\User\\restweek11\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
       "projectName": "RestApi",
-      "projectPath": "C:\\Users\\User\\rest\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
+      "projectPath": "C:\\Users\\User\\restweek11\\Rocket_Elevator_Foundation_Rest\\RestApi.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\rest\\Rocket_Elevator_Foundation_Rest\\obj\\",
+      "outputPath": "C:\\Users\\User\\restweek11\\Rocket_Elevator_Foundation_Rest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
