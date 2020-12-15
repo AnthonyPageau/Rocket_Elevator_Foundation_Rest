@@ -30,7 +30,7 @@ namespace RestApi.Controllers
         }
 
         [HttpGet("Amount")]
-        public async Task<IActionResult> getCities()
+        public async Task<IActionResult> getCitiesAll()
         {
             var allAdresses = _context.addresses.ToList();
 
